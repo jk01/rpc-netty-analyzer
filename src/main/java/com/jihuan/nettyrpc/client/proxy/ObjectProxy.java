@@ -1,9 +1,5 @@
 package com.jihuan.nettyrpc.client.proxy;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.util.UUID;
-
 import com.jihuan.nettyrpc.client.ConnectManage;
 import com.jihuan.nettyrpc.client.RPCFuture;
 import com.jihuan.nettyrpc.client.RpcClientHandler;
@@ -11,6 +7,14 @@ import com.jihuan.nettyrpc.protocol.RpcRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.util.UUID;
+/**
+ *@Description: rpc server
+ *@Author: jihuan
+ *@date: 2019/8/20
+ */
 public class ObjectProxy<T> implements InvocationHandler, IAsyncObjectProxy {
     private static final Logger LOGGER = LoggerFactory.getLogger(ObjectProxy.class);
     private Class<T> clazz;

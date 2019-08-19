@@ -1,15 +1,15 @@
 package com.tianjunwei.test.app;
 
-import java.util.List;
-import java.util.concurrent.CountDownLatch;
-
-import com.tianjunwei.test.client.HelloPersonService;
-import com.tianjunwei.test.client.Person;
 import com.jihuan.nettyrpc.client.AsyncRPCCallback;
 import com.jihuan.nettyrpc.client.RPCFuture;
 import com.jihuan.nettyrpc.client.RpcClient;
 import com.jihuan.nettyrpc.client.proxy.IAsyncObjectProxy;
 import com.jihuan.nettyrpc.registry.ServiceDiscovery;
+import com.tianjunwei.test.client.HelloPersonService;
+import com.tianjunwei.test.client.Person;
+
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 /**
 *@Description:
@@ -25,7 +25,7 @@ public class HelloPersonCallbackTest {
         try {
             IAsyncObjectProxy client = rpcClient.createAsync(HelloPersonService.class);
             int num = 5;
-            RPCFuture helloPersonFuture = client.call("GetTestPerson", "xiaoming", num);
+            RPCFuture helloPersonFuture = client.call("GetTestPerson", "xiaosong", num);
             helloPersonFuture.addCallback(new AsyncRPCCallback() {
                 @Override
                 public void success(Object result) {

@@ -24,15 +24,6 @@
 		<property name="prefix" value="/WEB-INF/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
-	<!--<bean id="helloService" class="com.tianjunwei.hessian.server.HelloServiceImpl" />  -->
-    <!--&lt;!&ndash; 使用Spring的HessianServie做代理 &ndash;&gt;  -->
-    <!--<bean name="/hessian.action"  -->
-    <!--class="org.springframework.remoting.caucho.HessianServiceExporter">  -->
-        <!--&lt;!&ndash; service引用具体的实现实体Bean&ndash;&gt;  -->
-        <!--<property name="service" ref="helloService" />  -->
-        <!--<property name="serviceInterface" value="com.tianjunwei.hessian.server.HelloService" />  -->
-    <!--</bean> -->
-	
+
 	
 </beans>

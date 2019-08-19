@@ -1,12 +1,11 @@
 package com.tianjunwei.test.app;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsEqual.equalTo;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-
+import com.jihuan.nettyrpc.client.RPCFuture;
+import com.jihuan.nettyrpc.client.RpcClient;
+import com.jihuan.nettyrpc.client.proxy.IAsyncObjectProxy;
+import com.tianjunwei.test.client.HelloPersonService;
+import com.tianjunwei.test.client.HelloService;
+import com.tianjunwei.test.client.Person;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,12 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.tianjunwei.test.client.HelloPersonService;
-import com.tianjunwei.test.client.HelloService;
-import com.tianjunwei.test.client.Person;
-import com.jihuan.nettyrpc.client.RPCFuture;
-import com.jihuan.nettyrpc.client.RpcClient;
-import com.jihuan.nettyrpc.client.proxy.IAsyncObjectProxy;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:client-spring.xml")
@@ -38,19 +37,19 @@ public class HelloServiceTest {
     @Test
     public void helloTest2() {
         HelloService helloService = rpcClient.create(HelloService.class);
-        Person person = new Person("Yong", "Huang");
+        Person person = new Person("Xiao", "Song");
         String result = helloService.hello(person);
-        Assert.assertEquals("Hello! Yong Huang", result);
+        Assert.assertEquals("Hello! Xiao Song", result);
     }
 
     @Test
     public void helloPersonTest(){
         HelloPersonService helloPersonService = rpcClient.create(HelloPersonService.class);
         int num = 5;
-        List<Person>  persons = helloPersonService.GetTestPerson("xiaoming",num);
+        List<Person>  persons = helloPersonService.GetTestPerson("xiaosong",num);
         List<Person> expectedPersons = new ArrayList<>();
         for (int i = 0; i < num; i++) {
-            expectedPersons.add(new Person(Integer.toString(i), "xiaoming"));
+            expectedPersons.add(new Person(Integer.toString(i), "xiaosong"));
         }
         assertThat(persons, equalTo(expectedPersons));
 
@@ -69,9 +68,9 @@ public class HelloServiceTest {
     @Test
     public void helloFutureTest2() throws ExecutionException, InterruptedException {
         IAsyncObjectProxy helloService = rpcClient.createAsync(HelloService.class);
-        Person person = new Person("Yong", "Huang");
+        Person person = new Person("Xiao", "Song");
         RPCFuture result = helloService.call("hello", person);
-        Assert.assertEquals("Hello! Yong Huang", result.get());
+        Assert.assertEquals("Hello! Xiao Song", result.get());
     }
 
     @Test

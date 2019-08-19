@@ -1,13 +1,13 @@
 package com.tianjunwei.test.util;
 
-import java.util.UUID;
-
-import com.tianjunwei.test.client.Person;
-import com.tianjunwei.test.server.HelloServiceImpl;
 import com.jihuan.nettyrpc.protocol.JsonUtil;
 import com.jihuan.nettyrpc.protocol.RpcRequest;
 import com.jihuan.nettyrpc.protocol.RpcResponse;
 import com.jihuan.nettyrpc.protocol.SerializationUtil;
+import com.tianjunwei.test.client.Person;
+import com.tianjunwei.test.server.HelloServiceImpl;
+
+import java.util.UUID;
 
 /**
  * Created by jsc on 2016-03-10.
@@ -34,7 +34,7 @@ public class JsonTest {
         RpcRequest request = new RpcRequest();
         request.setClassName(HelloServiceImpl.class.getName());
         request.setMethodName(HelloServiceImpl.class.getDeclaredMethods()[0].getName());
-        Person person = new Person("lu","xiaoxun");
+        Person person = new Person("jihuan","xiaosong");
         request.setParameters(new Object[]{person});
         request.setRequestId(UUID.randomUUID().toString());
         System.out.println(request.getRequestId());
