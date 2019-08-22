@@ -1,7 +1,7 @@
-package com.tianjunwei.test.server;
+package com.nettyrpc.test.server;
 
-import com.tianjunwei.test.client.HelloService;
-import com.tianjunwei.test.client.Person;
+import com.nettyrpc.test.client.HelloService;
+import com.nettyrpc.test.client.Person;
 import com.jihuan.nettyrpc.server.RpcService;
 
 @RpcService(HelloService.class)

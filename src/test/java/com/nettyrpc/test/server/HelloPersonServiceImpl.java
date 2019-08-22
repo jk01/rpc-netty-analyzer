@@ -1,10 +1,10 @@
-package com.tianjunwei.test.server;
+package com.nettyrpc.test.server;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tianjunwei.test.client.HelloPersonService;
-import com.tianjunwei.test.client.Person;
+import com.nettyrpc.test.client.HelloPersonService;
+import com.nettyrpc.test.client.Person;
 import com.jihuan.nettyrpc.server.RpcService;
 
 /**

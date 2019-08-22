@@ -1,11 +1,11 @@
-package com.tianjunwei.test.util;
+package com.nettyrpc.test.util;
 
 import com.jihuan.nettyrpc.protocol.JsonUtil;
 import com.jihuan.nettyrpc.protocol.RpcRequest;
 import com.jihuan.nettyrpc.protocol.RpcResponse;
 import com.jihuan.nettyrpc.protocol.SerializationUtil;
-import com.tianjunwei.test.client.Person;
-import com.tianjunwei.test.server.HelloServiceImpl;
+import com.nettyrpc.test.client.Person;
+import com.nettyrpc.test.server.HelloServiceImpl;
 
 import java.util.UUID;
 

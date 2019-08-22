@@ -1,12 +1,12 @@
-package com.tianjunwei.test.app;
+package com.nettyrpc.test.app;
 
 import com.jihuan.nettyrpc.client.AsyncRPCCallback;
 import com.jihuan.nettyrpc.client.RPCFuture;
 import com.jihuan.nettyrpc.client.RpcClient;
 import com.jihuan.nettyrpc.client.proxy.IAsyncObjectProxy;
 import com.jihuan.nettyrpc.registry.ServiceDiscovery;
-import com.tianjunwei.test.client.HelloPersonService;
-import com.tianjunwei.test.client.Person;
+import com.nettyrpc.test.client.HelloPersonService;
+import com.nettyrpc.test.client.Person;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;

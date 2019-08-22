@@ -1,4 +1,4 @@
-package com.tianjunwei.test.client;
+package com.nettyrpc.test.client;
 
 import java.util.List;
 

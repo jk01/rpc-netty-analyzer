@@ -1,6 +1,6 @@
-package com.tianjunwei.test.app;
+package com.nettyrpc.test.app;
 
-import com.tianjunwei.test.client.HelloService;
+import com.nettyrpc.test.client.HelloService;
 import com.jihuan.nettyrpc.client.RpcClient;
 import com.jihuan.nettyrpc.registry.ServiceDiscovery;
 

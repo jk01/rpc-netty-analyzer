@@ -1,11 +1,11 @@
-package com.tianjunwei.test.app;
+package com.nettyrpc.test.app;
 
 import com.jihuan.nettyrpc.client.RPCFuture;
 import com.jihuan.nettyrpc.client.RpcClient;
 import com.jihuan.nettyrpc.client.proxy.IAsyncObjectProxy;
-import com.tianjunwei.test.client.HelloPersonService;
-import com.tianjunwei.test.client.HelloService;
-import com.tianjunwei.test.client.Person;
+import com.nettyrpc.test.client.HelloPersonService;
+import com.nettyrpc.test.client.Person;
+import com.nettyrpc.test.client.HelloService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

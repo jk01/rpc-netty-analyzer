@@ -1,4 +1,4 @@
-package com.tianjunwei.test.server;
+package com.nettyrpc.test.server;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
