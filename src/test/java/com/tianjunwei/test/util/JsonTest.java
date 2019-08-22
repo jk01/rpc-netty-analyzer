@@ -9,9 +9,7 @@ import com.tianjunwei.test.server.HelloServiceImpl;
 
 import java.util.UUID;
 
-/**
- * Created by jsc on 2016-03-10.
- */
+
 public class JsonTest {
     public static void main(String[] args){
         RpcResponse response = new RpcResponse();
