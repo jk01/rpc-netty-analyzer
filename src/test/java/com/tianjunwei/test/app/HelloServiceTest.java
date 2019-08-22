@@ -77,11 +77,11 @@ public class HelloServiceTest {
     public void helloPersonFutureTest1() throws ExecutionException, InterruptedException {
         IAsyncObjectProxy helloPersonService = rpcClient.createAsync(HelloPersonService.class);
         int num = 5;
-        RPCFuture result = helloPersonService.call("GetTestPerson", "xiaoming", num);
+        RPCFuture result = helloPersonService.call("GetTestPerson", "xiaosong", num);
         List<Person> persons = (List<Person>) result.get();
         List<Person> expectedPersons = new ArrayList<>();
         for (int i = 0; i < num; i++) {
-            expectedPersons.add(new Person(Integer.toString(i), "xiaoming"));
+            expectedPersons.add(new Person(Integer.toString(i), "xiaosong"));
         }
         assertThat(persons, equalTo(expectedPersons));
 
